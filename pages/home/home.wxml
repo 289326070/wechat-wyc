@@ -1,0 +1,43 @@
+<!--首页-->
+<view class='user-box'>
+  <text class='iconfont icon-personal user'></text>
+  <text>正在使用光彩出行专车</text>
+</view>
+<!-- 定位 -->
+<view class='container' wx:if='{{!position_success}}'>
+  <view class='container site-box'>
+    <view class='line110 color6'>在这里上车</view>
+    <view class='flex flex-center'>
+      <icon class='yuan-green' />
+      <input value="635465" placeholder="请输入起点"></input>
+    </view>
+    <view class='flex flex-center'>
+      <icon class='yuan-red' />
+      <input value="635465" placeholder="您想去哪儿?"></input>
+    </view>
+  </view>
+</view>
+<!-- 定位完成之后 -->
+<view class='container'>
+  <view class='flex flex-between flex-center'>
+    <view class='flex flex-center width90'>
+      <icon class='yuan-green ' />
+      <input class='input-height' value="635465" value="起始地址" style="border:none"></input>
+    </view>
+    <text class="iconfont icon-sanjiao-r font16 color9"></text>
+  </view>
+  <view class='flex flex-between flex-center'>
+    <view class='flex flex-center width90'>
+      <icon class='yuan-red' />
+      <input class='input-height' value="635465" value="起始地址" style="border:none"></input>
+    </view>
+    <text class="iconfont icon-sanjiao-r font16 color9"></text>
+  </view>
+  
+  <view>
+    <view>光彩专车</view>
+    <view>
+      <image class="car-img" src='../../images/9.png'></image>
+    </view>
+  </view>
+</view>

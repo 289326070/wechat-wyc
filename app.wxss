@@ -1,0 +1,49 @@
+.flex{
+  -webkit-display:flex;
+  display:flex;
+}
+.flex-inline{
+ -webkit-display:inline-block;
+  display:inline-block;
+}
+.flex-between{
+  justify-content: space-between
+}
+.flex-center{
+  align-items: center;
+}
+
+
+
+
+/* 盒子 */
+.container{
+  padding:0 24rpx;
+}
+
+.border{
+  border:1px solid blue;
+}
+
+/* 字体大小 */
+.font12{
+  font-size:12px;
+}
+.font16{
+  font-size:20px;
+  font-weight: 900;
+}
+/* 颜色 */
+.color-green{
+  color:#02BC28
+}
+.color6{
+  color:#666;
+}
+.color9{
+  color:#999;
+}
+/* 行高 */
+.line110{
+  line-height:110rpx;
+}
