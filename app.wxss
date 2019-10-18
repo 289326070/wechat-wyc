@@ -33,6 +33,9 @@
   font-size:20px;
   font-weight: 900;
 }
+.font24{
+  font-size:24px;
+}
 /* 颜色 */
 .color-green{
   color:#02BC28
@@ -46,4 +49,13 @@
 /* 行高 */
 .line110{
   line-height:110rpx;
+}
+/* button */
+.button-max{
+  background:#FB503B;
+  color:#fff;
+  width:100%;
+}
+.radius{
+  border-radius:40px;
 }

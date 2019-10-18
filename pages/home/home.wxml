@@ -33,11 +33,15 @@
     </view>
     <text class="iconfont icon-sanjiao-r font16 color9"></text>
   </view>
-  
-  <view>
+
+  <view class='cart-box'>
     <view>光彩专车</view>
     <view>
-      <image class="car-img" src='../../images/9.png'></image>
+      <image class="car-img" src='../../images/9.png' mode='widthFix' style='width:50%'></image>
     </view>
-  </view>
+    <view>预计<text class='font24'>88.2</text>元</view>
+    <view>
+      <button class='button-max radius'>呼叫专车</button>
+    </view>
+    </view>
 </view>
