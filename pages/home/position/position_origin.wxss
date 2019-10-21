@@ -1,0 +1,55 @@
+/* pages/home/position/position_origin.wxss */
+@import "../../../utils/css/iconfont.wxss";
+.section{
+  -webkit-posiion:fixed;
+  position:fixed;
+  height: 30px;
+  width: 100%;
+  border-bottom:1px solid #eee;
+  font-size:14px;
+  padding:10px 0 10px 5px;
+  top:0;
+  background:#fff;
+}
+.section input{
+  width:80%;
+  margin:5px auto;
+  height:30px;
+  border-radius: 3px;
+  padding: 0 5px;
+}
+
+.flex .city-input{
+  display: flex;
+  align-items: center;
+  width:20%;
+}
+
+.flex>.city-site{
+  padding-left:15px;
+}
+.flex>.return{
+  display: inline-block;
+  width:20%;
+  text-align: center;
+  line-height: 28px;
+  color:#666666
+}
+.position-start{
+  overflow: hidden;
+  margin-top:50px;
+}
+.text-box{
+  padding:10px 15px;
+  border-bottom:1px solid #c3c3c3;
+  color:#999;
+}
+.text-box>.icon-dingwei{margin-right:15px;font-size:10px;font-weight: bold;}
+.text-box>.text-item>view:first-child{
+  color:#333;
+  font-size:14px;
+}
+.text-box>.text-item>view:last-child{
+  padding-top:3px;
+  font-size:12px;
+}

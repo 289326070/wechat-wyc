@@ -1,10 +1,17 @@
 {
   "pages": [
+      "pages/home/position/position_origin",
     "pages/home/home",
+ 
+    "pages/home/position/position_end",
     "pages/index/index",
     "pages/logs/logs"
-    
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置展示"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

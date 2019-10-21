@@ -4,44 +4,59 @@
   <text>正在使用光彩出行专车</text>
 </view>
 <!-- 定位 -->
-<view class='container' wx:if='{{!position_success}}'>
-  <view class='container site-box'>
-    <view class='line110 color6'>在这里上车</view>
-    <view class='flex flex-center'>
-      <icon class='yuan-green' />
-      <input value="635465" placeholder="请输入起点"></input>
-    </view>
-    <view class='flex flex-center'>
-      <icon class='yuan-red' />
-      <input value="635465" placeholder="您想去哪儿?"></input>
+<block wx:if='{{!position_success}}'>
+  <view class='container'>
+    <!--container site-box  -->
+    <view class='site-box'>
+      <view class='line110 color6 pl20'>在这里上车</view>
+      <navigator class="container" url="/pages/home/position/position_origin">
+        <view class='flex flex-center' bindtap="">
+          <icon class='yuan-green' />
+          <input value="635465" placeholder="请输入起点"></input>
+        </view>
+      </navigator>
+      <navigator class="container navigatorbottom" url="/pages/home/position/position_end?end=value">
+        <view class='flex flex-center'>
+          <icon class='yuan-red' />
+          <input value="635465" placeholder="您想去哪儿?"></input>
+        </view>
+      </navigator>
     </view>
   </view>
-</view>
+</block>
 <!-- 定位完成之后 -->
-<view class='container'>
-  <view class='flex flex-between flex-center'>
-    <view class='flex flex-center width90'>
-      <icon class='yuan-green ' />
-      <input class='input-height' value="635465" value="起始地址" style="border:none"></input>
+<block wx:else="{{position_success}}">
+  
+    <navigator class='container' url="/pages/home/position/position_origin">
+      <view class='flex flex-between flex-center'>
+        <view class='flex flex-center width90'>
+          <icon class='yuan-green ' />
+          <input class='input-height' value="635465" value="起始地址" style="border:none"></input>
+        </view>
+        <text class="iconfont icon-sanjiao-r font16 color9"></text>
+      </view>
+    </navigator>
+    <navigator class='container' url="/pages/home/position/position_end?">
+      <view class='flex flex-between flex-center'>
+        <view class='flex flex-center width90'>
+          <icon class='yuan-red' />
+          <input class='input-height' value="635465" value="起始地址" style="border:none"></input>
+        </view>
+        <text class="iconfont icon-sanjiao-r font16 color9"></text>
+      </view>
+    </navigator>
+    <view class='container'>
+      <view class='cart-box'>
+        <view>光彩专车</view>
+        <view>
+          <image class="car-img" src='../../images/9.png' mode='widthFix' style='width:50%'></image>
+        </view>
+        <view>
+          <text>预计</text>
+          <text class='font24'>88.2</text>元</view>
+        <view>
+          <button class='button-max radius'>呼叫专车</button>
+        </view>
+      </view>
     </view>
-    <text class="iconfont icon-sanjiao-r font16 color9"></text>
-  </view>
-  <view class='flex flex-between flex-center'>
-    <view class='flex flex-center width90'>
-      <icon class='yuan-red' />
-      <input class='input-height' value="635465" value="起始地址" style="border:none"></input>
-    </view>
-    <text class="iconfont icon-sanjiao-r font16 color9"></text>
-  </view>
-
-  <view class='cart-box'>
-    <view>光彩专车</view>
-    <view>
-      <image class="car-img" src='../../images/9.png' mode='widthFix' style='width:50%'></image>
-    </view>
-    <view>预计<text class='font24'>88.2</text>元</view>
-    <view>
-      <button class='button-max radius'>呼叫专车</button>
-    </view>
-    </view>
-</view>
+</block>

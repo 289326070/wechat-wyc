@@ -1,0 +1,20 @@
+<!--pages/home/position/position_origin.wxml-->
+<view class="section flex flex-center">
+  <view class="flex flex-center">
+    <input class='city-input' placeholder="城市名" />
+    <text class='iconfont icon-sort_desc'></text>
+    <input class='city-site' bindinput="bindInput" placeholder="搜索" focus="true" />
+  </view>
+  <view class='return' bindtap="returnFun">取消</view>
+</view>
+
+
+<view class='position-start'>
+  <view class="text-box flex flex-center" bindtouchstart="bindSearch" data-keywords="{{i.name}}" wx:for="{{tips}}" wx:for-item="i" wx:key='i'>
+    <text class='iconfont icon-dingwei' data-keywords="{{i.name}}"></text>
+    <view class='text-item' data-keywords="{{i.name}}">
+      <view data-keywords="{{i.name}}">{{i.name}}</view>
+      <view data-keywords="{{i.name}}">{{i.district}}{{i.address}}</view>
+    </view>
+  </view>
+</view>
