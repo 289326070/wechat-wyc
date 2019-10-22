@@ -1,143 +1,141 @@
-var amapFile = require('../../../libs/amap-wx.js');
-var config = require('../../../utils/config.js');
+// pages/home/position/position_origin.js
+const amapFile = require('../../../libs/amap-wx.js');
+const ALLCITY = require('../../../utils/js/city_two.js')
+import { config } from '../../../utils/js/config.js'
+import { Method } from '../../../utils/js/commonality.js'
+let _Method = new Method();
 
-var markersData = [];
 Page({
+
+  /**
+   * 页面的初始数据
+   */
   data: {
-    markers: [],
-    latitude: '',
-    longitude: '',
-    textData: {},
-    city: ''
+    tips: {},     //高德地图搜索上车数据
+    AllCity: null, //js加载的城市数据
+    city: '',
+    show_city: true, //控制城市名与上车地点显示元素
+
   },
-  makertap: function (e) {
-    var id = e.markerId;
+  // 搜索地区
+  bindInput: function (e) {
+
     var that = this;
-    that.showMarkerInfo(markersData, id);
-    that.changeMarkerColor(markersData, id);
-  },
-  onLoad: function (e) {
-    var that = this;
-    var key = config.key;
-    var myAmapFun = new amapFile.AMapWX({ key: key });
-    var params = {
-      iconPathSelected: '../../img/marker_checked.png',
-      iconPath: '../../img/marker.png',
+    that.setData({
+      show_city: false,
+    })
+    var keywords = e.detail.value;
+    var myAmapFun = new amapFile.AMapWX({ key: config.key });
+    myAmapFun.getInputtips({
+      keywords: keywords,
+      city: this.data.city,
       success: function (data) {
-        markersData = data.markers;
-        var poisData = data.poisData;
-        var markers_new = [];
-        markersData.forEach(function (item, index) {
-          markers_new.push({
-            id: item.id,
-            latitude: item.latitude,
-            longitude: item.longitude,
-            iconPath: item.iconPath,
-            width: item.width,
-            height: item.height
-          })
-
-        })
-        if (markersData.length > 0) {
+        if (data && data.tips) {
           that.setData({
-            markers: markers_new
-          });
-          that.setData({
-            city: poisData[0].cityname || ''
-          });
-          that.setData({
-            latitude: markersData[0].latitude
-          });
-          that.setData({
-            longitude: markersData[0].longitude
-          });
-          that.showMarkerInfo(markersData, 0);
-        } else {
-          wx.getLocation({
-            type: 'gcj02',
-            success: function (res) {
-              that.setData({
-                latitude: res.latitude
-              });
-              that.setData({
-                longitude: res.longitude
-              });
-              that.setData({
-                city: '北京市'
-              });
-            },
-            fail: function () {
-              that.setData({
-                latitude: 39.909729
-              });
-              that.setData({
-                longitude: 116.398419
-              });
-              that.setData({
-                city: '北京市'
-              });
-            }
-          })
-
-          that.setData({
-            textData: {
-              name: '抱歉，未找到结果',
-              desc: ''
-            }
+            tips: data.tips
           });
         }
+      }
+    })
+  },
+  bindSearch: function (e) {
+    var origin = e.target.dataset.keywords;
+    let pages = getCurrentPages();  // 当前页的数据，可以输出来看看有什么东西
+    let prevPage = pages[pages.length - 2]
+    prevPage.setData({
+      end_address: origin,
+    })
+    wx.navigateBack({});
+  },
 
-      },
-      fail: function (info) {
-        // wx.showModal({title:info.errMsg})
-      }
-    }
-    if (e && e.keywords) {
-      params.querykeywords = e.keywords;
-    }
-    myAmapFun.getPoiAround(params)
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.setData({
+      AllCity: ALLCITY.city
+    })
   },
-  bindInput: function (e) {
-    var that = this;
-    var url = '../home';
-    if (e.target.dataset.latitude && e.target.dataset.longitude && e.target.dataset.city) {
-      var dataset = e.target.dataset;
-      url = url + '?lonlat=' + dataset.longitude + ',' + dataset.latitude + '&city=' + dataset.city;
-    }
-    // wx.redirectTo({
-    //   url: url
-    // })
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
   },
-  showMarkerInfo: function (data, i) {
-    var that = this;
-    that.setData({
-      textData: {
-        name: data[i].name,
-        desc: data[i].address
-      }
-    });
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
   },
-  changeMarkerColor: function (data, i) {
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+  // return
+  returnFun: function () {
+    _Method._go();
+  },
+  //选择城市
+  inputFun: function (e) {
+    this.setData({
+      city: e.target.dataset.city,
+      show_city: false,
+    })
     var that = this;
-    var markers = [];
-    for (var j = 0; j < data.length; j++) {
-      if (j == i) {
-        data[j].iconPath = "../../img/marker_checked.png";
-      } else {
-        data[j].iconPath = "../../img/marker.png";
+    var keywords = e.target.dataset.city;
+    var myAmapFun = new amapFile.AMapWX({ key: config.key });
+    myAmapFun.getInputtips({
+      keywords: keywords,
+      city: this.data.city,
+      success: function (data) {
+        if (data && data.tips) {
+          that.setData({
+            tips: data.tips
+          });
+        }
       }
-      markers.push({
-        id: data[j].id,
-        latitude: data[j].latitude,
-        longitude: data[j].longitude,
-        iconPath: data[j].iconPath,
-        width: data[j].width,
-        height: data[j].height
-      })
-    }
-    that.setData({
-      markers: markers
-    });
+    })
+  },
+  focusFun: function () {
+    this.setData({
+      show_city: true,
+    })
   }
 
+
 })
+

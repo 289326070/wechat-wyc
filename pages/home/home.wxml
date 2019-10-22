@@ -8,17 +8,17 @@
   <view class='container'>
     <!--container site-box  -->
     <view class='site-box'>
-      <view class='line110 color6 pl20'>在这里上车</view>
+      <view class='line110 color6 pl20 title'>在这里上车</view>
       <navigator class="container" url="/pages/home/position/position_origin">
-        <view class='flex flex-center' bindtap="">
+        <view class='flex flex-center' >
           <icon class='yuan-green' />
-          <input value="635465" placeholder="请输入起点"></input>
+          <input value='{{origin_address}}' placeholder="请输入坐车起点"></input>
         </view>
       </navigator>
       <navigator class="container navigatorbottom" url="/pages/home/position/position_end?end=value">
         <view class='flex flex-center'>
-          <icon class='yuan-red' />
-          <input value="635465" placeholder="您想去哪儿?"></input>
+          <icon class='yuan-red'/>
+          <input value='{{end_address}}' placeholder="您想去哪儿?"></input>
         </view>
       </navigator>
     </view>
@@ -26,12 +26,11 @@
 </block>
 <!-- 定位完成之后 -->
 <block wx:else="{{position_success}}">
-  
     <navigator class='container' url="/pages/home/position/position_origin">
       <view class='flex flex-between flex-center'>
         <view class='flex flex-center width90'>
           <icon class='yuan-green ' />
-          <input class='input-height' value="635465" value="起始地址" style="border:none"></input>
+          <input class='input-height' value="{{origin_address}}" style="border:none"></input>
         </view>
         <text class="iconfont icon-sanjiao-r font16 color9"></text>
       </view>
@@ -40,7 +39,7 @@
       <view class='flex flex-between flex-center'>
         <view class='flex flex-center width90'>
           <icon class='yuan-red' />
-          <input class='input-height' value="635465" value="起始地址" style="border:none"></input>
+          <input class='input-height' value="{{end_address}}"  style="border:none"></input>
         </view>
         <text class="iconfont icon-sanjiao-r font16 color9"></text>
       </view>

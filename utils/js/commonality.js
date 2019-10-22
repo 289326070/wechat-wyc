@@ -5,13 +5,20 @@ class Method{
     if(!index){
       index = 1;
     }
-    console.log(index)
     wx.navigateBack({
       delta: index
     })
   }
-  // 
-
+  //返回上一
+  _go_data(url,index) {
+    if (!index) {
+      index = 1;
+    }
+    wx.navigateBack({
+      url: url,
+      delta: index
+    })
+  }
 
 
 }

@@ -1,14 +1,29 @@
 <!--pages/home/position/position_origin.wxml-->
 <view class="section flex flex-center">
   <view class="flex flex-center">
-    <input class='city-input' placeholder="城市名" />
+    <input class='city-input' placeholder="城市名" value="{{city}}" bindfocus="focusFun"/>
     <text class='iconfont icon-sort_desc'></text>
-    <input class='city-site' bindinput="bindInput" placeholder="搜索" focus="true" />
+    <input class='city-site' bindinput="bindInput" placeholder="您在哪上车" focus="true" />
   </view>
   <view class='return' bindtap="returnFun">取消</view>
 </view>
 
 
+<!-- 搜索城市名 -->
+<block wx:if='{{show_city}}'>
+  <view style="margin-top:60px;">
+    热门城市
+  </view>
+ <view class='' wx:for="{{AllCity}}" wx:for-item="itemList" wx:key="index">
+    <view class='zimu'>{{itemList.code}}</view>
+    <view class='city-item' wx:for="{{itemList.cityList}}" wx:for-item='item' wx:key="index" data-city='{{item}}' bindtap="inputFun">
+      {{item}}
+    </view>
+  </view>
+</block>
+
+<!-- 搜索坐车起点 -->
+<block wx:else>
 <view class='position-start'>
   <view class="text-box flex flex-center" bindtouchstart="bindSearch" data-keywords="{{i.name}}" wx:for="{{tips}}" wx:for-item="i" wx:key='i'>
     <text class='iconfont icon-dingwei' data-keywords="{{i.name}}"></text>
@@ -18,3 +33,4 @@
     </view>
   </view>
 </view>
+</block>

@@ -1,45 +1,69 @@
-/* pages/home/position/position_end.wxss */
+/* pages/home/position/position_origin.wxss */
+@import "../../../utils/css/iconfont.wxss";
 .section{
+  -webkit-posiion:fixed;
+  position:fixed;
   height: 30px;
   width: 100%;
+  border-bottom:1px solid #eee;
+  font-size:14px;
+  padding:10px 0 10px 5px;
+  top:0;
+  background:#fff;
 }
 .section input{
-  width:90%;
+  width:80%;
   margin:5px auto;
-  border:1px solid #c3c3c3;
   height:30px;
   border-radius: 3px;
   padding: 0 5px;
 }
-.map_container{
-  position: absolute;
-  top: 42px;
-  bottom: 80px;
-  left: 0;
-  right: 0;
+
+.flex .city-input{
+  display: flex;
+  align-items: center;
+  width:20%;
 }
-.map{
-  width: 100%;
-  height: 100%;
+
+.flex>.city-site{
+  padding-left:15px;
 }
-.map_text{
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 80px;
-  background: #fff;
-  padding: 0 15px;
+.flex>.return{
+  display: inline-block;
+  width:20%;
+  text-align: center;
+  line-height: 28px;
+  color:#666666
 }
-text{
-  margin: 5px 0;
-  display: block;
-  font-size:12px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.position-start{
   overflow: hidden;
+  margin-top:50px;
 }
-.h1{
-  margin: 15px 0;
-  font-size:15px;
+.text-box{
+  padding:10px 15px;
+  border-bottom:1px solid #f1f1f1;
+  color:#999;
+}
+.text-box>.icon-dingwei{margin-right:15px;font-size:10px;font-weight: bold;}
+.text-box>.text-item>view:first-child{
+  color:#333;
+  font-size:14px;
+}
+.text-box>.text-item>view:last-child{
+  padding-top:3px;
+  font-size:12px;
+}
+.zimu{
+  background:#fafafa;
+  color:#666;
+  font-size:14px;
+  text-indent:1em;
+  line-height:40px;
+}
+.city-item{
+  font-size:14px;
+  color:#333;
+  border-bottom:1px solid #f1f1f1;
+  line-height:46px;
+  text-indent:1em;
 }

@@ -1,11 +1,36 @@
-<!--pages/home/position/position_end.wxml-->
-<view class="section">
-  <input data-city="{{city}}" data-longitude="{{longitude}}" data-latitude="{{latitude}}" bindtouchstart="bindInput" placeholder="搜索"/>
+<!--pages/home/position/position_origin.wxml-->
+<view class="section flex flex-center">
+  <view class="flex flex-center">
+    <input class='city-input' placeholder="城市名" value="{{city}}" bindfocus="focusFun"/>
+    <text class='iconfont icon-sort_desc'></text>
+    <input class='city-site' bindinput="bindInput" placeholder="您要去那"/>
+  </view>
+  <view class='return' bindtap="returnFun">取消</view>
 </view>
-<view class="map_container">
-  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map>
+
+
+<!-- 搜索城市名 -->
+<block wx:if='{{show_city}}'>
+  <view style="margin-top:60px;">
+    热门城市
+  </view>
+ <view class='' wx:for="{{AllCity}}" wx:for-item="itemList" wx:key="index">
+    <view class='zimu'>{{itemList.code}}</view>
+    <view class='city-item' wx:for="{{itemList.cityList}}" wx:for-item='item' wx:key="index" data-city='{{item}}' bindtap="inputFun">
+      {{item}}
+    </view>
+  </view>
+</block>
+
+<!-- 搜索坐车起点 -->
+<block wx:else>
+<view class='position-start'>
+  <view class="text-box flex flex-center" bindtouchstart="bindSearch" data-keywords="{{i.name}}" wx:for="{{tips}}" wx:for-item="i" wx:key='i'>
+    <text class='iconfont icon-dingwei' data-keywords="{{i.name}}"></text>
+    <view class='text-item' data-keywords="{{i.name}}">
+      <view data-keywords="{{i.name}}">{{i.name}}</view>
+      <view data-keywords="{{i.name}}">{{i.district}}{{i.address}}</view>
+    </view>
+  </view>
 </view>
-<view class="map_text">
-  <text class="h1">{{textData.name}}</text>
-  <text>{{textData.desc}}</text>
-</view>
+</block>

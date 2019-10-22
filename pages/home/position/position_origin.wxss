@@ -41,7 +41,7 @@
 }
 .text-box{
   padding:10px 15px;
-  border-bottom:1px solid #c3c3c3;
+  border-bottom:1px solid #f1f1f1;
   color:#999;
 }
 .text-box>.icon-dingwei{margin-right:15px;font-size:10px;font-weight: bold;}
@@ -52,4 +52,18 @@
 .text-box>.text-item>view:last-child{
   padding-top:3px;
   font-size:12px;
+}
+.zimu{
+  background:#fafafa;
+  color:#666;
+  font-size:14px;
+  text-indent:1em;
+  line-height:40px;
+}
+.city-item{
+  font-size:14px;
+  color:#333;
+  border-bottom:1px solid #f1f1f1;
+  line-height:46px;
+  text-indent:1em;
 }

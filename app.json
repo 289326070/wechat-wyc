@@ -1,8 +1,7 @@
 {
   "pages": [
-      "pages/home/position/position_origin",
     "pages/home/home",
- 
+    "pages/home/position/position_origin",
     "pages/home/position/position_end",
     "pages/index/index",
     "pages/logs/logs"
