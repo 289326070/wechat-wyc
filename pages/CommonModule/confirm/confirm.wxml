@@ -1,0 +1,5 @@
+<!--pages/CommonModule/confirm/confirm.wxml-->
+<text>pages/CommonModule/confirm/confirm.wxml</text>
+  <view class="confirm">
+      这是一个组件
+  </view>

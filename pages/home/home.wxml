@@ -9,10 +9,10 @@
     <!--container site-box  -->
     <view class='site-box'>
       <view class='line110 color6 pl20 title'>在这里上车</view>
-      <navigator class="container" url="/pages/home/position/position_origin">
+      <navigator class="container navigatorbottom1" url="/pages/home/position/position_origin">
         <view class='flex flex-center' >
           <icon class='yuan-green' />
-          <input value='{{origin_address}}' placeholder="请输入坐车起点"></input>
+          <input value='{{origin_address}}' placeholder="{{origin_place}}"></input>
         </view>
       </navigator>
       <navigator class="container navigatorbottom" url="/pages/home/position/position_end?end=value">
@@ -58,4 +58,9 @@
         </view>
       </view>
     </view>
+</block>
+
+<!-- 控制用户是否授权 -->
+<block>
+
 </block>
