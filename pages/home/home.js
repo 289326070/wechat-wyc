@@ -20,6 +20,7 @@ Page({
 
   onLoad: function(options) {
     this.getLocation();
+    wx.getSetting()
   },
 
   /**
