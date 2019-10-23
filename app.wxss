@@ -46,6 +46,10 @@
 .color9{
   color:#999;
 }
+/* 背景色 */
+.bgf{
+  background:#ffffff;
+}
 /* 行高 */
 .line110{
   line-height:110rpx;
@@ -58,4 +62,8 @@
 }
 .radius{
   border-radius:40px;
+}
+/* 对齐 */
+.center{
+  text-align: center;
 }

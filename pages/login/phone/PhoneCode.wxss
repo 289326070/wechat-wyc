@@ -1,0 +1,19 @@
+/* pages/login/phone/PhoneCode.wxss */
+@import "phone.wxss";
+.code-box{
+  margin-bottom:20px;
+  border-bottom:1px solid #DFDFDF;
+}
+.code-box>input{
+  height:40px;
+  width:75%;
+}
+.timing{
+  border:1px solid #FB503B;
+  padding:6px 8px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
+  color:#FB503B;
+  text-align: center;
+  font-size:13px;
+}

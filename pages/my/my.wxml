@@ -1,0 +1,14 @@
+<!--pages/my/my.wxml-->
+<view class="center user-box">
+  <image src="../../images/user.png" mode='widthFix' style="width:20%;"></image>
+  <view class="userName">15115060523</view>
+</view>
+<view class="container bgf">
+  <navigator class="flex flex-between flex-center my-nav" style="line-height:50px"> 
+    <view >
+      <text class="iconfont icon-gou"></text>
+     <text>我的行程</text>
+    </view>
+    <text class="iconfont icon-sanjiao-r"></text>
+  </navigator>
+</view>

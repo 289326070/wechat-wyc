@@ -1,10 +1,15 @@
 {
   "pages": [
+    "pages/my/my",
+    "pages/login/phone/PhoneCode",
+    "pages/login/phone/phone",
+    "pages/login/login",
     "pages/home/home",
     "pages/home/position/position_origin",
     "pages/home/position/position_end",
     "pages/index/index",
     "pages/logs/logs"
+   
   ],
   "permission": {
     "scope.userLocation": {
@@ -13,7 +18,7 @@
   },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#fafafa",
     "navigationBarTitleText": "光彩出行",
     "navigationBarTextStyle": "black"
   },

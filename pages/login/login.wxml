@@ -1,0 +1,10 @@
+<!--pages/login/login.wxml-->
+
+<view class="center">
+  <image src="../../images/logo.png" mode="aspectFit" style="width:30%;height:100px;"></image>
+  <view class="cetnre font17">光彩出行</view>
+</view>
+<view class="container login-box">
+  <button class="iconfont icon-weixin" open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber"><icon class="iconfont icon-weixin"/> 微信用户一键登录</button>
+  <button bindtap="urlFun">使用手机号登录/注册</button>
+</view>

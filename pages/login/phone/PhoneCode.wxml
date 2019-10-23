@@ -1,0 +1,12 @@
+<!--pages/login/phone/PhoneCode.wxml-->
+<view class='container title-box'>
+  <view>请输入验证码</view>
+  <view>验证码已发送至:{{phone}}</view>
+</view>
+<view class="container input-container">
+  <view class="code-box flex flex-between flex-center">
+    <input type="number" maxlength="{{codeLength}}" focus='true' placeholder="请输入6位数字验证码" bindinput='valueFun'></input>
+     <text class='timing' bindtap="timingFun">{{time}}秒</text>
+  </view>
+  <button class='button-max' bindtap="HomeFun" disabled='{{state}}'>下一步</button>
+</view>

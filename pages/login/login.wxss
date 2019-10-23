@@ -1,0 +1,23 @@
+/* pages/login/login.wxss */
+@import '../../utils/css/iconfont.wxss';
+@import '../../utils/css/remove.wxss';
+.login-box{
+  margin-top:20%;
+}
+.login-box>button{
+  margin-top:15px;
+  line-height: 50px;
+  height:50px;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+.login-box>button:first-child{
+  color:#fff;
+  background:#1AAD19;
+
+}
+.login-box>button:last-child{
+  background:rgba(248,248,248,1);
+  color:#333;
+  border:1px solid rgba(196,196,196,1);
+}

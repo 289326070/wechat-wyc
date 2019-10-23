@@ -1,0 +1,20 @@
+/* pages/my/my.wxss */
+@import '../../utils/css/iconfont.wxss';
+page{
+  background:#FAFAFA;
+}
+.user-box{
+  background:#ffffff;
+  padding:25px 0;
+  margin-bottom:10px;
+}
+.userName{
+  margin-top:10px;
+
+}
+.my-nav{
+  line-height:45px;
+}
+.my-nav>view>text{
+
+}

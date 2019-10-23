@@ -1,0 +1,29 @@
+/* pages/login/phone/phone.wxss */
+@import '../../../utils/css/remove.wxss';
+.title-box{
+  margin-top:5%;
+}
+.title-box>view:first-child{
+  color:#333;
+  font-size: 18px;
+  line-height: 38px;
+  font-weight: 500;
+}
+.title-box>view:last-child{
+  color:#999999;
+  font-size: 15px;
+}
+.input-container{
+  margin-top:80px;
+}
+.input-container>input{
+  border-bottom:1px solid #DFDFDF;
+  height:40px;
+  margin-bottom:20px;
+}
+.button{
+ background:#ccc;
+ border:none;
+ color:#fff;
+}
+

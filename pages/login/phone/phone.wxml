@@ -1,0 +1,10 @@
+<!--pages/login/phone/phone.wxml-->
+<view class='container title-box'>
+  <view>请输入手机号码</view>
+  <view>为方便取得联系，请输入您常用的手机号码</view>
+</view>
+<view class="container input-container">
+  <input type="number" maxlength="11" focus='true' placeholder="请输入11位手机号码" bindinput='valueFun'></input>
+  <!-- class='state?"button-max":"button"' -->
+  <button class="{{state?'button':'button-max'}}" bindtap="nextFun" disabled='{{state}}'>下一步</button>
+</view>

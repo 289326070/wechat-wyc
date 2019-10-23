@@ -1,6 +1,6 @@
 <!--首页-->
 <view class='user-box'>
-  <text class='iconfont icon-personal user'></text>
+  <text class='iconfont icon-personal user' bindtap="loginFun"></text>
   <text>正在使用光彩出行专车</text>
 </view>
 <!-- 定位 -->

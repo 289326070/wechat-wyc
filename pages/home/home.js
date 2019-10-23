@@ -21,6 +21,7 @@ Page({
 
   onLoad: function(options) {
     console.log('监听页面加载1')
+    console.log(options)
     wx.authorize({
        scope: 'scope.userLocation',
        success: (res) => {
@@ -125,4 +126,18 @@ Page({
       }
     })
   },
+  //判断用户授权登录
+  loginFun:function(){
+    wx.login({
+      success(res) {
+        console.log(res)
+        if (res.code) {
+          //发起网络请求
+         console.log('登录成功')
+        } else {
+          console.log('登录失败！')
+        }
+      }
+    })
+  }
 })
