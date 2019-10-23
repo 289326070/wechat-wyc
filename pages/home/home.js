@@ -12,6 +12,7 @@ Page({
     origin_address: null, //起点
     end_address: null, //终点
     position_success: false, //定位
+    origin_place:"请输入起点"
   },
  
   /**
@@ -19,22 +20,52 @@ Page({
    */
 
   onLoad: function(options) {
-    this.getLocation();
-    wx.getSetting()
+    console.log('监听页面加载1')
+    wx.authorize({
+       scope: 'scope.userLocation',
+       success: (res) => {
+        console.log(res)
+         if (res["errMsg:authorize:ok"]){
+           this.getLocation();
+         }else{
+           console.log(2)
+           wx.openSetting({
+             success(res) {
+               console.log(res.authSetting)
+              
+             }
+           })
+         }
+       },
+    })
+    // wx.getSetting({
+    //   success:(res)=>{
+    //     console.log(res.authSetting['scope.userLocation'])
+    //     if (res.authSetting['scope.userLocation']){
+    //       console.log(2)
+    //       this.getLocation();
+    //     }else{
+    //       console.log(1)
+          
+
+    //     }
+    //   }
+    // })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-  
+    console.log('监听页面初次渲染完成2')
   
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function (options) {
+  onShow: function () {
+    console.log('监听页面显示3')
     //判断用户起点与终点是否输入
     if (this.data.origin_address && this.data.end_address){
       this.setData({
@@ -47,6 +78,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function() {
+    console.log('监听页面隐藏4')
 
   },
 
@@ -54,7 +86,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function() {
-
+    console.log('监听页面卸载5')
   },
 
   /**
@@ -79,13 +111,14 @@ Page({
   },
   //定位
   getLocation: function () {
+    this.setData({
+      origin_place:'正在获取上车位置'
+    })
     var myAmapFun = new amapFile.AMapWX({
       key: config.key
     });
     myAmapFun.getRegeo({
       success: (res) => {
-        console.log(res)
-        console.log(res, res[0].regeocodeData.formatted_address)
         this.setData({
           origin_address: res[0].name
         })
