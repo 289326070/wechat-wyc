@@ -13,8 +13,13 @@ page{
 
 }
 .my-nav{
-  line-height:45px;
+  line-height:50px;
+  border-bottom:1px solid #f1f1f1;
+
 }
 .my-nav>view>text{
-
+  margin-right:20px;
+}
+.iconfont{
+  font-size: 18px;
 }

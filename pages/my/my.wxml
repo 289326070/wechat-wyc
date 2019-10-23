@@ -3,11 +3,32 @@
   <image src="../../images/user.png" mode='widthFix' style="width:20%;"></image>
   <view class="userName">15115060523</view>
 </view>
-<view class="container bgf">
-  <navigator class="flex flex-between flex-center my-nav" style="line-height:50px"> 
-    <view >
-      <text class="iconfont icon-gou"></text>
-     <text>我的行程</text>
+<view class="bgf">
+  <navigator class="container flex flex-between flex-center my-nav" hover-class="none" url='journey/journey'>
+    <view>
+      <text class="iconfont icon-wodehangcheng"></text>
+      <text>我的行程</text>
+    </view>
+    <text class="iconfont icon-sanjiao-r"></text>
+  </navigator>
+  <navigator class="container flex flex-between flex-center my-nav" hover-class="none" url=''>
+    <view>
+      <text class="iconfont icon-qianbao" style="font-size:16px;margin-left:-2px"></text>
+      <text>我的钱包</text>
+    </view>
+    <text class="iconfont icon-sanjiao-r"></text>
+  </navigator>
+  <navigator class="container flex flex-between flex-center my-nav" hover-class="none" url=''>
+    <view>
+      <text class="iconfont icon-kefu2"></text>
+      <text>客服中心</text>
+    </view>
+    <text class="iconfont icon-sanjiao-r"></text>
+  </navigator>
+   <navigator class="container flex flex-between flex-center my-nav" hover-class="none" url=''>
+    <view>
+      <text class="iconfont icon-shezhi"></text>
+      <text>设置</text>
     </view>
     <text class="iconfont icon-sanjiao-r"></text>
   </navigator>

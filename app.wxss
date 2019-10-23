@@ -8,7 +8,7 @@
 }
 .flex-between{
   justify-content: space-between
-}
+} 
 .flex-center{
   align-items: center;
 }
@@ -66,4 +66,16 @@
 /* 对齐 */
 .center{
   text-align: center;
+}
+/* 共用圆点 */
+.yuan-green,.yuan-red{
+  display: inline-block;
+  border:2px solid #02BC28;
+  -webkit-border-radius:50%;
+  border-radius: 50%;
+  width:4px;
+  height:4px;
+}
+.yuan-red{
+  border-color: red;
 }

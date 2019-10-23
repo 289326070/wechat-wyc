@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/my/journey/journey",
     "pages/my/my",
     "pages/login/phone/PhoneCode",
     "pages/login/phone/phone",
@@ -9,7 +10,6 @@
     "pages/home/position/position_end",
     "pages/index/index",
     "pages/logs/logs"
-   
   ],
   "permission": {
     "scope.userLocation": {

@@ -1,0 +1,28 @@
+/* pages/my/journey/journey.wxss */
+@import '../../../utils/css/iconfont.wxss';
+
+page {
+  background: #fafafa;
+}
+
+.journey-box {
+  background: #fff;
+  padding: 20px 17px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #666;
+}
+.journey-box>view{
+  margin-bottom:10px;
+}
+.icon-shijian::before{
+  font-size: 10px;
+  margin-right:8px;
+  margin-top:-5px;
+}
+.icon-sanjiao-r {
+  font-size: 16px;
+  margin-left: 8px;
+  font-weight: bold;
+}
