@@ -1,0 +1,20 @@
+<!--pages/CommonModule/CartData/CartData.wxml-->
+<view class='flexCart cart-data'>
+  <view class="flexCart">
+    <image class="cart-img" src="../../../images/user.png"></image>
+    <view class='name-box'>
+      <view class="flexCart">
+        <text class="name">王虾仁</text>
+        <text class='iconfont icon-xing1'></text>
+        <text>4789单</text>
+      </view>
+      <view class="cart-license">湘RU9999</view>
+      <view>
+        白色<text class="iconfont icon-dian--"></text>大众宝来</view>
+    </view>
+  </view>
+  <view>
+    <image class="phone-img" src="../../../images/phone.png"></image>
+  </view>
+ 
+</view>

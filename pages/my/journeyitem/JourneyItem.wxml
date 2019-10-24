@@ -1,0 +1,14 @@
+<!--pages/my/journey-item/JourneyItem.wxml-->
+<view class="container">
+  <view class="">
+    <common-cart-data></common-cart-data>
+    <common-pay-detail>
+      <text slot="before">支付成功</text>
+      <view slot="after" class="flex">
+        <navigator  hover-class="none" url="../journey/journey">查看明细 <text class="iconfont icon-sanjiao-r"></text></navigator>
+        <navigator  hover-class="none" url="">开具发票 <text class="iconfont icon-sanjiao-r"></text></navigator>
+      </view>
+    </common-pay-detail>
+   <common-border-text>给他评价</common-border-text>
+  </view>
+</view>

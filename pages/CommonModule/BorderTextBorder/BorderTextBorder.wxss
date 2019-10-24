@@ -1,0 +1,18 @@
+/* pages/CommonModule/BorderTextBorder/BorderTextBorder.wxss */
+.flex-border{
+  -webkit-display:flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-border>text{
+  border-top:1px solid rgba(223,223,223,1);
+  width:100%;
+  text-align: center;
+}
+.flex-border>.text{
+  width:70%;
+  border:none;
+  font-size: 12px;
+  color:#999
+}

@@ -1,24 +1,32 @@
 <!--pages/my/journey/journey.wxml-->
-<view class="container">
-  <navigator class="journey-box" hover-class="none" url=''>
-    <view class="flex flex-between flex-center">
-      <view>专车 </view>
-      <view>
-        <text>已完成</text>
-        <text class="iconfont icon-sanjiao-r"></text>
+<block wx:if='{{state}}'>
+  <view class="container" >
+    <navigator class="journey-box" hover-class="none" url='../journeyitem/JourneyItem?item=1' wx:for='item in 0' wx:key='index'>
+      <view class="flex flex-between flex-center">
+        <view>专车 </view>
+        <view>
+          <text>已完成</text>
+          <text class="iconfont icon-sanjiao-r"></text>
+        </view>
       </view>
-    </view>
-    <view class="flex flex-center">
-      <text class="iconfont icon-shijian"></text>
-      <text>2018年12月20日 18:13</text>
-    </view>
-    <view>
-      <text class="yuan-red"></text>
-      <text>芙蓉北路中国建设银行</text>
-    </view>
-     <view>
-      <text class="yuan-green"></text>
-      <text>开福区时光聚点</text>
-    </view>
-  </navigator>
+      <view class="flex flex-center">
+        <text class="iconfont icon-shijian"></text>
+        <text>2018年12月20日 18:13</text>
+      </view>
+      <view class="flex flex-center">
+        <text class="yuan-red"></text>
+        <text>芙蓉北路中国建设银行</text>
+      </view>
+      <view class="flex flex-center">
+        <text class="yuan-green"></text>
+        <text>开福区时光聚点</text>
+      </view>
+    </navigator>
+    <view class="pull_text">{{pull_text}}</view>
+  </view>
+</block>
+<view wx:else>
+  <component-no-data>
+    <view class="color6">暂无行程，快去叫车吧~</view>
+  </component-no-data>
 </view>

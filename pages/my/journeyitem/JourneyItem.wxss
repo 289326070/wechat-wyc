@@ -1,0 +1,5 @@
+/* pages/my/journey-item/JourneyItem.wxss */
+@import "../../../utils/css/iconfont.wxss";
+page{
+  background:#fafafa;
+}

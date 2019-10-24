@@ -1,0 +1,10 @@
+<!--pages/CommonModule/BorderTextBorder/BorderTextBorder.wxml-->
+<view class="flex-border">
+  <text></text>
+  <text class="text"><slot></slot></text>
+  <text></text>
+</view>
+<view>
+
+</view>
+

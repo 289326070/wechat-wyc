@@ -1,0 +1,45 @@
+/* pages/CommonModule/PayDetail/PayDetail.wxss */
+@import "../../../utils/css/iconfont.wxss";
+
+.flex-pay{
+  -webkit-display:flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pay-detail {
+  padding: 15px;
+  background: #fff;
+}
+
+.center {
+  text-align: center;
+}
+
+.money-box {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+.money-box>.money {
+  font-size: 28px;
+  color: #333;
+  margin-top:5px;
+}
+.icon-sanjiao-r{
+ font-weight: bold;
+}
+.pay-success{
+  font-weight: bold;
+  color:#333;
+  font-size: 16px;
+}
+.flex-pay>view>navigator{
+  margin-top:10px;
+  font-size: 14px;
+  color:#666;
+}
+.flex-pay>view>navigator:first-child{
+  margin-right:10px;
+}

@@ -1,19 +1,18 @@
-// pages/my/journey/journey.js
+// pages/my/journey-item/JourneyItem.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    state:true,
-    pull_text:'加载更多'
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options.item)
   },
 
   /**
@@ -48,14 +47,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    console.log('下拉刷新')
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    console.log('上拉加载')
+
   },
 
   /**

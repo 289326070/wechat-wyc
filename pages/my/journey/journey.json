@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "我的行程"
+  "usingComponents": {
+    "component-no-data":"../../CommonModule/NoData/NoData"
+  },
+  "navigationBarTitleText": "我的行程",
+  "enablePullDownRefresh": true
 }

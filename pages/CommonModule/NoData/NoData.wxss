@@ -1,0 +1,9 @@
+/* pages/CommonModule/NoData/NoData.wxss */
+@import "../../../utils/css/iconfont.wxss";
+.module-data{
+  text-align: center;
+  margin-top:20%;
+}
+.module-data>.iconfont{
+  padding-left:35px;
+}

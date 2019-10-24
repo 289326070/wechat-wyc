@@ -1,0 +1,5 @@
+<!--pages/CommonModule/NoData/NoData.wxml-->
+<view class="module-data">
+  <view class="iconfont icon-meiyourenwu" style="font-size:150px;color:#efefef;margin-bottom:20px;"></view>
+  <slot class='slot'></slot>
+</view>

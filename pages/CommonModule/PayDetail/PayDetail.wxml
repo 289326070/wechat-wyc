@@ -1,0 +1,14 @@
+<!--pages/CommonModule/PayDetail/PayDetail.wxml-->
+<view class="pay-detail" wx:if='{{state}}'>
+
+  <text class='pay-success'><slot name="before"></slot></text>
+  <view class="money-box"><text class="money">124.56</text>\t元</view>
+  <view class="center">
+    <view class="flex-pay">
+        <slot name="after"></slot>
+    </view>
+  </view>
+</view>
+<view wx:else>
+
+</view>
