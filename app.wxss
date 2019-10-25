@@ -29,6 +29,9 @@
 .font12{
   font-size:12px;
 }
+.font15{
+  font-size: 16px;
+}
 .font16{
   font-size:20px;
   font-weight: 900;

@@ -1,0 +1,74 @@
+<!--pages/cost/cost.wxml-->
+<view class="center cost-container">
+  <view class="font15">专车</view>
+  <view style="margin:4px 0 8px">2018-05-20</view>
+  <view>
+    <common-border-text>费用明细</common-border-text>
+  </view>
+  <view class="cost-details">
+    <view class="flex flex-between color3">
+      <text>起步价</text>
+      <text class="">8.00元</text>
+    </view>
+    <view class="flex flex-between color3">
+      <text>里程费（10公里）</text>
+      <text class="">8.00元</text>
+    </view>
+
+    <view class="flex flex-between ">
+      <text>起步里程（2公里）</text>
+      <text></text>
+    </view>
+    <view class="flex flex-between ">
+      <text>普通时段（2公里）</text>
+      <text>2.00元</text>
+    </view>
+    <view class="flex flex-between ">
+      <text>8:30-8:59（2公里）</text>
+      <text>2.00元</text>
+    </view>
+    <view class="flex flex-between ">
+      <text>8:30-8:59（2公里）</text>
+      <text>2.00元</text>
+    </view>
+    <view class="flex flex-between color3">
+      <text>时长费（10公里）</text>
+      <text>12.00元</text>
+    </view>
+    <view class="flex flex-between ">
+      <text>起步里程（2公里）</text>
+      <text></text>
+    </view>
+    <view class="flex flex-between ">
+      <text>普通时段（2公里）</text>
+      <text>2.00元</text>
+    </view>
+    <view class="flex flex-between ">
+      <text>8:30-8:59（2公里）</text>
+      <text>2.00元</text>
+    </view>
+    <view class="flex flex-between ">
+      <text>8:30-8:59（2公里）</text>
+      <text>2.00元</text>
+    </view>
+    <view class="flex flex-between color3">
+      <text>远途费（5公里）</text>
+      <text>12.00元</text>
+    </view>
+    <view class="flex flex-between colorRed">
+      <text>优惠券抵扣（最高减10元）</text>
+      <text>-12.00元</text>
+    </view>
+  </view>
+  <view class="right">
+    <view>支付金额
+      <text class="money">17.23</text>元</view>
+    <view>
+      <text class='iconfont icon-xinghao'></text>车费计算四舍五入取小数点后两位</view>
+  </view>
+  <view class="center">
+    <navigator hover-class="none" url=''>
+      计价规则
+    </navigator>
+  </view>
+</view>

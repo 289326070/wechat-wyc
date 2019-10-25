@@ -27,9 +27,11 @@
 }
 
 .cart-img {
-  width: 100rpx;
-  height: 100rpx;
+  width: 70px;
+  height: 70px;
   margin-right:10px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
 }
 
 .name-box>view{

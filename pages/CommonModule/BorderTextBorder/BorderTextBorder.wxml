@@ -4,7 +4,5 @@
   <text class="text"><slot></slot></text>
   <text></text>
 </view>
-<view>
 
-</view>
 

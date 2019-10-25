@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "common-border-text": "../CommonModule/BorderTextBorder/BorderTextBorder"
+  }
+}

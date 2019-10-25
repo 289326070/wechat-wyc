@@ -1,0 +1,12 @@
+<!--pages/CommonModule/Xing/Xing.wxml-->
+
+<view class="flex-xing">
+  <text class="iconfont icon-xing1 {{index<1?'iconfont-active':'iconfont-red'}}" bindtap="xingFun" data-xing='1'></text>
+  <text class="iconfont icon-xing1 {{index<2?'iconfont-active':'iconfont-red'}}" bindtap="xingFun" data-xing='2'></text>
+  <text class="iconfont icon-xing1 {{index<3?'iconfont-active':'iconfont-red'}}" bindtap="xingFun" data-xing='3'></text>
+  <text class="iconfont icon-xing1 {{index<4?'iconfont-active':'iconfont-red'}}" bindtap="xingFun" data-xing='4'></text>
+  <text class="iconfont icon-xing1 {{index<5?'iconfont-active':'iconfont-red'}}" bindtap="xingFun" data-xing='5'></text>
+</view>
+<view class="{{index>0?'center-xing-item':'center-xing'}}">
+  {{text[index]}}
+</view>

@@ -1,4 +1,4 @@
-// pages/my/journey-item/JourneyItem.js
+// pages/cost/cost.js
 Page({
 
   /**
@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.item)
+
   },
 
   /**
@@ -62,9 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  onMyEvent:function(e){
-    console.log('父组件')
-    console.log(e.detail)
   }
 })

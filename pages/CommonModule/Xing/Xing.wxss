@@ -1,0 +1,36 @@
+/* pages/CommonModule/Xing/Xing.wxss */
+
+@import "../../../utils/css/iconfont.wxss";
+
+.flex-xing {
+  -webkit-display: flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.iconfont {
+  font-size: 24px;
+  padding: 0 7px;
+}
+
+.iconfont-active {
+  color: #e7e7e7;
+ 
+}
+
+.center-xing,.center-xing-item {
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  margin-top: 15px;
+  padding-bottom:10px;
+
+}
+.center-xing-item{
+  color:#FD503B;
+}
+.iconfont-red{
+  color: #FD503B;
+ 
+}

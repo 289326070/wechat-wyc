@@ -2,7 +2,8 @@
   "usingComponents": {
     "common-cart-data":"../../CommonModule/CartData/CartData",
     "common-pay-detail":"../../CommonModule/PayDetail/PayDetail",
-    "common-border-text":"../../CommonModule/BorderTextBorder/BorderTextBorder"
+    "common-border-text":"../../CommonModule/BorderTextBorder/BorderTextBorder",
+    "commone-xing":"../../CommonModule/Xing/Xing"
   },
     "navigationBarTitleText": "行程详情"
 }

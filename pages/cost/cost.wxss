@@ -1,0 +1,53 @@
+/* pages/cost/cost.wxss */
+@import "../../utils/css/iconfont.wxss";
+.page{
+  background:#fafafa;
+}
+.cost-container{
+  padding:15px 30px 0;
+  font-size: 14px;
+  color:#666;
+}
+
+.cost-container>view{
+  margin-bottom:8px;
+}
+.cost-details>view{
+  line-height: 24px;
+}
+.cost-details>.color3{
+  color:#000;
+  line-height:28px;
+}
+.cost-details>.colorRed{
+  color:#FD503B;
+  line-height:28px;
+  padding-bottom:5px;
+  border-bottom:1px solid #eee;
+}
+.money{
+  font-size: 28px;
+  color:#333;
+}
+.right{
+  text-align: right;
+ 
+}
+.right>view:first-child{
+  font-size: 16px;
+  margin-bottom:8px;
+}
+.icon-xinghao{
+  font-size: 10px;
+  color:#666
+}
+navigator{
+  display: inline-block;
+  width:30%;
+  border:3rpx solid rgba(153,153,153,1);
+  line-height:30px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-top:10px;
+}
